@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+//Route::get('/', 'WelcomeController@index');
 
+Route::get('/', 'TunesController@index');
+
+
+//Laravel 5 examples:
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
