@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'TunesController@index');
 //Route::get('/', 'WelcomeController@index');
+Route::get('/', 'TunesController@index');
+Route::get('foo', 'TunesController@foo');
 
 
 //Laravel 5 example
