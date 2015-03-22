@@ -11,15 +11,9 @@
 |
 */
 
+Route::get('/', 'TunesController@index');
 //Route::get('/', 'WelcomeController@index');
 
-Route::get('/', 'TunesController@index');
 
-
-//Laravel 5 examples:
+//Laravel 5 example
 Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
