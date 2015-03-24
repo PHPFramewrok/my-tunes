@@ -13,7 +13,8 @@
 
 //Route::get('/', 'WelcomeController@index');
 Route::get('/', 'TunesController@index');
-Route::get('foo', 'TunesController@foo');
+Route::get('library', 'TunesController@library');
+Route::get('artist/{artistString}', 'SortController@artist');
 
 
 //Laravel 5 example

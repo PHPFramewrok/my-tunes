@@ -2,7 +2,8 @@
 
 
 @section('content')
-
-	<div class="title">FOO</div>
-
+	<div>
+		{{ $artist }}
+	</div>
+	
 @stop

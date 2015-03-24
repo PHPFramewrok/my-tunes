@@ -3,6 +3,9 @@
 
 @section('content')
 
-	<div class="title">myTunes</div>
+	<div class="title">{{ $title }}</div>
+	<div class="linked">
+		<a href="library">Go To Library</a>
+	</div>
 
 @stop
