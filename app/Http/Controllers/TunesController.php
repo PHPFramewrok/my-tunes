@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use DB;
+
+
 class TunesController extends Controller {
 
 	/**
@@ -14,6 +17,8 @@ class TunesController extends Controller {
 	 */
 	public function index()
 	{
+		$libraryPath = $this->getLibraryFilePath();
+
 		return view('tunes')->withTitle('myTunes');
 	}
 
@@ -39,9 +44,16 @@ class TunesController extends Controller {
 
 	// P R I V A T E   F U N C T I O N S:
 
+	private function getLibraryFilePath() 
+	{
+		//TODO: Move to service
+		return DB::table('library_path')->get();
+	}
+
+
 	private function getArtists() 
 	{
-		//TEMP: temporary hard-coded move to sqlite DB/service
+		//TODO: temporary hard-coded move to sqlite DB/service
 		return ['Beatles','Bob Dylan','Led Zeppelin','Neil Young','Rolling Stones','The Whos'];
 	}
 
